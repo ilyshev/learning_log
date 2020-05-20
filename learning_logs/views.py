@@ -72,7 +72,7 @@ def new_entry(request, topic_id):
 
 @login_required
 def edit_entry(request, entry_id):
-    """Editing entry"""
+    '''Editing entry'''
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
     if topic.owner != request.user:
